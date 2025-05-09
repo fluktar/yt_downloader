@@ -4,3 +4,6 @@ Usunięto plik: /home/fluktar/Dokumenty/Pobrane/youtube/10 Second Timer.mp4
 Pobrano: /home/fluktar/Dokumenty/Pobrane/youtube/10 Second Timer.webm
 Skopiowano do wybranej lokalizacji: /home/fluktar/Dokumenty/Pobrane/youtube/10 Second Timer.webm
 Usunięto plik: /home/fluktar/Dokumenty/Pobrane/youtube/10 Second Timer.webm
+[2025-05-09 23:00:13] [INFO] Pobrano: /home/fluktar/Dokumenty/Pobrane/youtube/10 Second Timer.mp4
+[2025-05-09 23:00:30] [INFO] Skopiowano do wybranej lokalizacji: /home/fluktar/Dokumenty/Pobrane/youtube/10 Second Timer.mp4
+[2025-05-09 23:00:30] [INFO] Usunięto plik: /home/fluktar/Dokumenty/Pobrane/youtube/10 Second Timer.mp4

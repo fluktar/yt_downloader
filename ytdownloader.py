@@ -16,12 +16,24 @@ DOWNLOAD_PATH = os.path.abspath(
     os.path.join(__file__, "..", "..", "..", "..", "..", "Pobrane", "youtube")
 )
 
+LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO")
 
-def log_event(message):
+
+def should_log(level):
+    levels = {"ERROR": 0, "WARNING": 1, "INFO": 2}
+    return levels.get(level, 2) <= levels.get(LOG_LEVEL, 2)
+
+
+def log_event(message, level="INFO"):
+    if not should_log(level):
+        return
     log_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), "log.txt")
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    entry = f"[{timestamp}] [{level}] {message}\n"
     with open(log_file, "a") as f:
-        f.write(f"[{timestamp}] {message}\n")
+        f.write(entry)
+    # Możesz też wyświetlać na ekranie:
+    # print(entry, end="")
 
 
 def check_free_space(directory, min_bytes=500 * 1024 * 1024):
@@ -46,10 +58,18 @@ def main():
             print(
                 f"Za mało wolnego miejsca w {DOWNLOAD_PATH} ({free // (1024*1024)} MB). Pobieranie anulowane."
             )
-            log_event(f"Za mało miejsca: {free} bajtów w {DOWNLOAD_PATH}")
+            log_event(
+                f"Za mało miejsca: {free} bajtów w {DOWNLOAD_PATH}", level="ERROR"
+            )
             continue
 
-        file_path = download_video(url, DOWNLOAD_PATH, only_audio=only_audio)
+        try:
+            file_path = download_video(url, DOWNLOAD_PATH, only_audio=only_audio)
+        except Exception as e:
+            log_event(f"Błąd podczas pobierania: {e}", level="ERROR")
+            print("Wystąpił błąd podczas pobierania. Szczegóły w logu.")
+            continue
+
         if file_path:
             log_event(f"Pobrano: {file_path}")
             copy_to(file_path, USER_PATHS_FILE)
