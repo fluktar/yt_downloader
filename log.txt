@@ -23,3 +23,30 @@ Usunięto plik: /home/fluktar/Dokumenty/Pobrane/youtube/10 Second Timer.webm
 [2025-05-09 23:09:26] [INFO] Skopiowano do wybranej lokalizacji: /home/fluktar/Dokumenty/Pobrane/youtube/10 Second Timer.mp4
 [2025-05-09 23:09:26] [INFO] Usunięto plik: /home/fluktar/Dokumenty/Pobrane/youtube/10 Second Timer.mp4
 [2025-05-09 23:09:26] [INFO] Adres już istnieje w adres.txt: https://www.youtube.com/watch?v=tCDvOQI3pco
+[2025-05-09 23:57:53] [INFO] URL already exists in adres.txt: https://www.youtube.com/watch?v=tCDvOQI3pco
+[2025-05-09 23:58:05] [INFO] Stats updated: total downloaded 2.68 MB
+[2025-05-09 23:58:05] [INFO] Downloaded: /home/fluktar/Dokumenty/Pobrane/youtube/10 Second Timer.mp4
+[2025-05-09 23:58:10] [INFO] Copied to selected location: /home/fluktar/Dokumenty/Pobrane/youtube/10 Second Timer.mp4
+[2025-05-09 23:58:10] [INFO] Deleted file: /home/fluktar/Dokumenty/Pobrane/youtube/10 Second Timer.mp4
+[2025-05-09 23:58:10] [INFO] URL already exists in adres.txt: https://www.youtube.com/watch?v=tCDvOQI3pco
+[2025-05-10 00:00:03] [INFO] URL already exists in adres.txt: https://www.youtube.com/watch?v=tCDvOQI3pco
+[2025-05-10 00:00:13] [INFO] Stats updated: total downloaded 4.02 MB
+[2025-05-10 00:00:13] [INFO] Downloaded: /home/fluktar/Pobrane/youtube/10 Second Timer.mp4
+[2025-05-10 00:03:14] [INFO] URL already exists in adres.txt: https://www.youtube.com/watch?v=tCDvOQI3pco
+[2025-05-10 00:03:26] [INFO] Stats updated: total downloaded 5.36 MB
+[2025-05-10 00:03:26] [INFO] Downloaded: /home/fluktar/Pobrane/youtube/10 Second Timer.mp4
+[2025-05-10 00:03:42] [INFO] Copied to selected location: /home/fluktar/Pobrane/youtube/10 Second Timer.mp4
+[2025-05-10 00:03:42] [INFO] Deleted file: /home/fluktar/Pobrane/youtube/10 Second Timer.mp4
+[2025-05-10 00:03:42] [INFO] URL already exists in adres.txt: https://www.youtube.com/watch?v=tCDvOQI3pco
+[2025-05-10 00:06:08] [INFO] URL already exists in adres.txt: https://www.youtube.com/watch?v=tCDvOQI3pco
+[2025-05-10 00:06:20] [INFO] Stats updated: total downloaded 6.70 MB
+[2025-05-10 00:06:20] [INFO] Downloaded: /home/fluktar/Pobrane/youtube/10 Second Timer.mp4
+[2025-05-10 00:06:27] [INFO] Copied to selected location: /home/fluktar/Pobrane/youtube/10 Second Timer.mp4
+[2025-05-10 00:06:27] [INFO] Deleted file: /home/fluktar/Pobrane/youtube/10 Second Timer.mp4
+[2025-05-10 00:06:27] [INFO] URL already exists in adres.txt: https://www.youtube.com/watch?v=tCDvOQI3pco
+[2025-05-10 00:09:05] [INFO] URL already exists in adres.txt: https://www.youtube.com/watch?v=tCDvOQI3pco
+[2025-05-10 00:09:17] [INFO] Stats updated: total downloaded 8.04 MB
+[2025-05-10 00:09:17] [INFO] Downloaded: /home/fluktar/Pobrane/youtube/10 Second Timer.mp4
+[2025-05-10 00:09:25] [INFO] Copied to selected location: /home/fluktar/Pobrane/youtube/10 Second Timer.mp4
+[2025-05-10 00:09:25] [INFO] Deleted file: /home/fluktar/Pobrane/youtube/10 Second Timer.mp4
+[2025-05-10 00:09:25] [INFO] URL already exists in adres.txt: https://www.youtube.com/watch?v=tCDvOQI3pco

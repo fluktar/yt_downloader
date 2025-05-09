@@ -103,12 +103,10 @@ def copy_to(file_path, user_paths_file):
 def delete_file(file_path):
     """Deletes the specified file if it exists."""
     if path.exists(file_path):
-        remove(file_path)
-        print(f"Deleted: {file_path}")
+        try:
+            remove(file_path)
+            print(f"Deleted: {file_path}")
+        except Exception as e:
+            print(f"Wystąpił błąd podczas usuwania pliku: {e}")
     else:
         print("File does not exist or invalid path.")
-    try:
-        remove(file_path)
-        print(f"Usunięto: {file_path}")
-    except Exception as e:
-        print(f"Wystąpił błąd podczas usuwania pliku: {e}")

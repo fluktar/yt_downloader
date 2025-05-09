@@ -1,5 +1,6 @@
 from os import path
 import json
+import os
 
 
 def load_user_paths(user_paths_file):
@@ -10,7 +11,10 @@ def load_user_paths(user_paths_file):
     return []
 
 
-def save_user_paths(paths, user_paths_file):
-    """Saves user-defined paths to a JSON file."""
+def save_user_paths(user_paths, user_paths_file):
+    # Upewnij się, że katalog istnieje
+    dir_path = os.path.dirname(user_paths_file)
+    if not os.path.exists(dir_path):
+        os.makedirs(dir_path)
     with open(user_paths_file, "w") as f:
-        json.dump(paths, f)
+        json.dump(user_paths, f, indent=2)

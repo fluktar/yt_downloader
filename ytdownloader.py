@@ -9,12 +9,16 @@ from stats import add_to_stats, load_stats
 
 load_dotenv()
 
-USER_PATHS_FILE = os.path.join(
-    os.path.dirname(os.path.abspath(__file__)), "user_paths.json"
+USER_PATHS_FILE = os.getenv(
+    "USER_PATHS_FILE",
+    os.path.join(os.path.dirname(os.path.abspath(__file__)), "user_paths.json"),
 )
 
-DOWNLOAD_PATH = os.path.abspath(
-    os.path.join(__file__, "..", "..", "..", "..", "..", "Pobrane", "youtube")
+DOWNLOAD_PATH = os.getenv(
+    "DOWNLOAD_PATH",
+    os.path.abspath(
+        os.path.join(__file__, "..", "..", "..", "..", "..", "Pobrane", "youtube")
+    ),
 )
 
 LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO")
@@ -65,6 +69,11 @@ def main():
     total_mb = load_stats()
     print(f"Total downloaded so far: {total_mb:.2f} MB")
 
+    user_paths = load_user_paths(USER_PATHS_FILE)
+    if DOWNLOAD_PATH and DOWNLOAD_PATH not in user_paths:
+        user_paths.insert(0, DOWNLOAD_PATH)
+        save_user_paths(user_paths, USER_PATHS_FILE)
+
     while True:
         url_input = input("Enter video link (leave empty to use the default): ").strip()
         url = url_input if url_input else "https://www.youtube.com/watch?v=tCDvOQI3pco"
@@ -103,10 +112,17 @@ def main():
             except Exception as e:
                 log_event(f"Failed to update stats: {e}", level="WARNING")
             log_event(f"Downloaded: {file_path}")
+            user_paths = load_user_paths(USER_PATHS_FILE)
+            if DOWNLOAD_PATH and DOWNLOAD_PATH not in user_paths:
+                user_paths.insert(0, DOWNLOAD_PATH)
+                save_user_paths(user_paths, USER_PATHS_FILE)
             copy_to(file_path, USER_PATHS_FILE)
             log_event(f"Copied to selected location: {file_path}")
-            delete_file(file_path)
-            log_event(f"Deleted file: {file_path}")
+            if os.path.exists(file_path):
+                delete_file(file_path)
+                log_event(f"Deleted file: {file_path}")
+            else:
+                log_event(f"File not found for deletion: {file_path}", level="WARNING")
         save_url_if_new(url)
         again = input("Do you want to download another file? (y/n): ").strip().lower()
         if again != "y":
