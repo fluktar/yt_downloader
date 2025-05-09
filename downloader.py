@@ -4,8 +4,9 @@ from os import path, makedirs
 
 def download_video(url, download_path, only_audio=False):
     """
-    Pobiera wideo z YouTube w wybranej rozdzielczości.
-    Jeśli wybrany format nie zawiera audio, zostanie połączony z najlepszym audio.
+    Downloads a video or audio from YouTube.
+    If only_audio is True, downloads and extracts audio as mp3.
+    If only_audio is False, allows user to select video format and merges with best audio if needed.
     """
     try:
         if not path.exists(download_path):
@@ -25,60 +26,56 @@ def download_video(url, download_path, only_audio=False):
                 "noplaylist": True,
                 "quiet": True,
             }
-        else:
-            # Pobranie wszystkich formatów
-            ydl_opts = {"quiet": True, "noplaylist": True}
             with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+                info_dict = ydl.extract_info(url, download=True)
+                file_path = ydl.prepare_filename(info_dict)
+                print(f"Downloaded: {info_dict.get('title', 'Unknown title')}")
+                print(f"Saved to: {file_path}")
+                return file_path
+        else:
+            # Download all available formats and let user choose
+            with youtube_dl.YoutubeDL({"quiet": True, "noplaylist": True}) as ydl:
                 info_dict = ydl.extract_info(url, download=False)
-                all_formats = info_dict.get("formats", [])
-
-                # Filtrowanie: tylko formaty zawierające wideo (czyli HD, FHD itd.)
-                video_formats = [
-                    fmt
-                    for fmt in all_formats
-                    if fmt.get("vcodec") != "none"
-                    and isinstance(fmt.get("height"), int)
-                    and fmt.get("height", 0) >= 720
-                ]
-
+                formats = info_dict.get("formats", [])
+                video_formats = [f for f in formats if f.get("vcodec") != "none"]
                 if not video_formats:
-                    print("Nie znaleziono żadnych formatów wideo.")
+                    print("No video formats available.")
                     return None
 
-                print("Dostępne formaty wideo:")
+                # Display available formats
                 for i, fmt in enumerate(video_formats):
-                    resolution = fmt.get("height", "Brak rozdzielczości")
-                    filesize = fmt.get("filesize", "Nieznany rozmiar")
+                    resolution = fmt.get("height", "unknown")
+                    filesize = fmt.get("filesize", "unknown")
                     has_audio = fmt.get("acodec") != "none"
                     audio_info = (
                         "video + audio"
                         if has_audio
-                        else "video only (audio będzie dodane)"
+                        else "video only (audio will be added)"
                     )
                     print(
-                        f"{i + 1}. {fmt['format_id']} - Rozdzielczość: {resolution}p, Rozmiar: {filesize}, Typ: {audio_info}"
+                        f"{i + 1}. {fmt['format_id']} - Resolution: {resolution}p, Size: {filesize}, Type: {audio_info}"
                     )
 
-                # Wybór użytkownika
+                # User selects format
                 try:
-                    choice = int(input("Wybierz numer formatu do pobrania: ")) - 1
+                    choice = int(input("Select format number to download: ")) - 1
                     if choice < 0 or choice >= len(video_formats):
-                        print("Nieprawidłowy wybór. Pobieranie anulowane.")
+                        print("Invalid choice. Download canceled.")
                         return None
                 except ValueError:
-                    print("Nieprawidłowy wybór. Pobieranie anulowane.")
+                    print("Invalid choice. Download canceled.")
                     return None
 
                 selected_format = video_formats[choice]
                 selected_format_id = selected_format["format_id"]
-                print(f"Wybrano format: {selected_format_id}")
+                print(f"Selected format: {selected_format_id}")
 
-                # Jeśli wybrany format nie ma audio, dodajemy bestaudio
+                # If selected format has no audio, add bestaudio
                 if selected_format.get("acodec") == "none":
                     selected_format_id += "+bestaudio"
-                    print("Do formatu zostanie dodany najlepszy dostępny dźwięk.")
+                    print("Best available audio will be added to the format.")
 
-            # Opcje pobierania z łączeniem dźwięku i wideo
+            # Download with merging video and audio if needed
             ydl_opts = {
                 "outtmpl": path.join(download_path, "%(title)s.%(ext)s"),
                 "format": selected_format_id,
@@ -90,17 +87,15 @@ def download_video(url, download_path, only_audio=False):
                     }
                 ],
                 "ffmpeg_location": "/usr/bin/ffmpeg",
-                "noplaylist": True,  # <-- dodaj to tutaj
+                "noplaylist": True,
             }
-
-        # Pobieranie i zapisywanie pliku
-        with youtube_dl.YoutubeDL(ydl_opts) as ydl:
-            info_dict = ydl.extract_info(url, download=True)
-            file_path = ydl.prepare_filename(info_dict)
-            print(f"Pobrano: {info_dict.get('title', 'Unknown title')}")
-            print(f"Zapisano w: {file_path}")
-            return file_path
+            with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+                info_dict = ydl.extract_info(url, download=True)
+                file_path = ydl.prepare_filename(info_dict)
+                print(f"Downloaded: {info_dict.get('title', 'Unknown title')}")
+                print(f"Saved to: {file_path}")
+                return file_path
 
     except Exception as e:
-        print(f"Wystąpił błąd podczas pobierania: {e}")
+        print(f"Error during download: {e}")
         return None

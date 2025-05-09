@@ -1,53 +1,55 @@
 # yt_downloader
 
-Prosty program do pobierania filmów i muzyki z YouTube z obsługą wyboru formatu, katalogów docelowych i logowaniem operacji.
+A simple program for downloading videos and music from YouTube with format selection, destination folder management, and operation logging.
 
-## Funkcje
+## Features
 
-- Pobieranie wideo lub tylko audio z YouTube
-- Wybór formatu i jakości
-- Kopiowanie plików do wybranych katalogów (z możliwością dodawania/usuwania ścieżek)
-- Sprawdzanie wolnego miejsca na dysku przed pobraniem
-- Logowanie operacji do pliku `log.txt`
-- Konfiguracja katalogów przez plik `.env`
-- Testy jednostkowe
+- Download video or audio only from YouTube
+- Select format and quality
+- Copy files to chosen directories (with the ability to add/remove paths)
+- Check free disk space before downloading
+- Log operations to `log.txt` with date, time, and log level (INFO/WARNING/ERROR)
+- Save every downloaded YouTube URL to `adres.txt` (duplicates are ignored)
+- Configure directories and log level via `.env` file
+- Track total MB downloaded in `stats.log` (displayed at program start)
+- Unit tests included
 
-## Wymagania
+## Requirements
 
 - Python 3.8+
 - yt-dlp
 - python-dotenv
 
-## Instalacja
+## Installation
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Użycie
+## Usage
 
-1. Skonfiguruj plik `.env` (opcjonalnie) z domyślnymi ścieżkami.
-2. Uruchom program:
+1. Configure the `.env` file (optional) with default paths and log level.
+2. Run the program:
 
 ```bash
 python ytdownloader.py
 ```
 
-3. Postępuj zgodnie z instrukcjami w terminalu.
+3. Follow the instructions in the terminal.
 
-## Testy
+## Tests
 
-Aby uruchomić testy jednostkowe:
+To run unit tests:
 
 ```bash
 python test_basic.py
 ```
 
-## Uwagi
+## Notes
 
-- Program nie jest przeznaczony do pobierania materiałów chronionych prawem autorskim bez zgody właściciela.
-- Używaj zgodnie z regulaminem YouTube.
+- This program is not intended for downloading copyrighted materials without the owner's permission.
+- Use in accordance with YouTube's Terms of Service.
 
 ---
 
-**Zachęcam do zgłaszania błędów i propozycji!**
+**Feel free to report bugs and suggestions!**
