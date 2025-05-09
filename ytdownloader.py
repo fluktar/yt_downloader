@@ -19,6 +19,12 @@ DOWNLOAD_PATH = os.path.abspath(
 
 LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO")
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+
+def get_file_path(filename):
+    return os.path.join(BASE_DIR, filename)
+
 
 def should_log(level):
     levels = {"ERROR": 0, "WARNING": 1, "INFO": 2}
@@ -28,7 +34,7 @@ def should_log(level):
 def log_event(message, level="INFO"):
     if not should_log(level):
         return
-    log_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), "log.txt")
+    log_file = get_file_path("log.txt")
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     entry = f"[{timestamp}] [{level}] {message}\n"
     with open(log_file, "a") as f:
@@ -45,7 +51,7 @@ def check_free_space(directory, min_bytes=500 * 1024 * 1024):
 
 
 def save_url_if_new(url):
-    adres_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), "adres.txt")
+    adres_file = get_file_path("adres.txt")
     # Load existing URLs (one per line)
     if os.path.exists(adres_file):
         with open(adres_file, "r") as f:
@@ -64,54 +70,64 @@ def save_url_if_new(url):
 def main():
     total_mb = load_stats()
     print(f"Total downloaded so far: {total_mb:.2f} MB")
-
-    while True:
-        url_input = input("Enter video link (leave empty to use the default): ").strip()
-        url = url_input if url_input else "https://www.youtube.com/watch?v=tCDvOQI3pco"
-
-        save_url_if_new(url)
-
-        typ = input("What do you want to download? [1] Video [2] Audio only: ").strip()
-        only_audio = typ == "2"
-
-        ok, free = check_free_space(DOWNLOAD_PATH)
-        if not ok:
-            print(
-                f"Not enough free space in {DOWNLOAD_PATH} ({free // (1024*1024)} MB). Download canceled."
+    try:
+        while True:
+            url_input = input(
+                "Enter video link (leave empty to use the default): "
+            ).strip()
+            url = (
+                url_input
+                if url_input
+                else "https://www.youtube.com/watch?v=tCDvOQI3pco"
             )
-            log_event(
-                f"Not enough space: {free} bytes in {DOWNLOAD_PATH}", level="ERROR"
-            )
-            continue
 
-        try:
-            file_path = download_video(url, DOWNLOAD_PATH, only_audio=only_audio)
-        except Exception as e:
-            log_event(f"Error during download: {e}", level="ERROR")
-            print("An error occurred during download. See log for details.")
-            continue
+            typ = input(
+                "What do you want to download? [1] Video [2] Audio only: "
+            ).strip()
+            only_audio = typ == "2"
 
-        if file_path:
-            # Count the size of the downloaded file
-            try:
-                size_bytes = os.path.getsize(file_path)
-                total_mb = add_to_stats(size_bytes)
-                log_event(
-                    f"Stats updated: total downloaded {total_mb:.2f} MB",
-                    level="INFO",
+            ok, free = check_free_space(DOWNLOAD_PATH)
+            if not ok:
+                print(
+                    f"Not enough free space in {DOWNLOAD_PATH} ({free // (1024*1024)} MB). Download canceled."
                 )
+                log_event(
+                    f"Not enough space: {free} bytes in {DOWNLOAD_PATH}", level="ERROR"
+                )
+                continue
+
+            try:
+                file_path = download_video(url, DOWNLOAD_PATH, only_audio=only_audio)
             except Exception as e:
-                log_event(f"Failed to update stats: {e}", level="WARNING")
-            log_event(f"Downloaded: {file_path}")
-            copy_to(file_path, USER_PATHS_FILE)
-            log_event(f"Copied to selected location: {file_path}")
-            delete_file(file_path)
-            log_event(f"Deleted file: {file_path}")
-        save_url_if_new(url)
-        again = input("Do you want to download another file? (y/n): ").strip().lower()
-        if again != "y":
-            print("Program finished.")
-            break
+                log_event(f"Error during download: {e}", level="ERROR")
+                print("An error occurred during download. See log for details.")
+                continue
+
+            if file_path:
+                try:
+                    size_bytes = os.path.getsize(file_path)
+                    total_mb = add_to_stats(size_bytes)
+                    log_event(
+                        f"Stats updated: total downloaded {total_mb:.2f} MB",
+                        level="INFO",
+                    )
+                except Exception as e:
+                    log_event(f"Failed to update stats: {e}", level="WARNING")
+                log_event(f"Downloaded: {file_path}")
+                copy_to(file_path, USER_PATHS_FILE)
+                log_event(f"Copied to selected location: {file_path}")
+                delete_file(file_path)
+                log_event(f"Deleted file: {file_path}")
+                save_url_if_new(url)  # tylko po udanym pobraniu
+
+            again = (
+                input("Do you want to download another file? (y/n): ").strip().lower()
+            )
+            if again != "y":
+                print("Program finished.")
+                break
+    except KeyboardInterrupt:
+        print("\nProgram interrupted by user.")
 
 
 if __name__ == "__main__":
