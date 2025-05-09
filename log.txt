@@ -50,3 +50,12 @@ Usunięto plik: /home/fluktar/Dokumenty/Pobrane/youtube/10 Second Timer.webm
 [2025-05-10 00:09:25] [INFO] Copied to selected location: /home/fluktar/Pobrane/youtube/10 Second Timer.mp4
 [2025-05-10 00:09:25] [INFO] Deleted file: /home/fluktar/Pobrane/youtube/10 Second Timer.mp4
 [2025-05-10 00:09:25] [INFO] URL already exists in adres.txt: https://www.youtube.com/watch?v=tCDvOQI3pco
+[2025-05-10 00:13:45] [INFO] URL already exists in adres.txt: https://www.youtube.com/watch?v=tCDvOQI3pco
+[2025-05-10 00:13:46] [INFO] URL already exists in adres.txt: https://www.youtube.com/watch?v=tCDvOQI3pco
+[2025-05-10 00:13:59] [INFO] URL already exists in adres.txt: https://www.youtube.com/watch?v=tCDvOQI3pco
+[2025-05-10 00:14:00] [INFO] URL already exists in adres.txt: https://www.youtube.com/watch?v=tCDvOQI3pco
+[2025-05-10 00:14:58] [INFO] URL already exists in adres.txt: https://www.youtube.com/watch?v=tCDvOQI3pco
+[2025-05-10 00:15:09] [INFO] Downloaded: /home/fluktar/Pobrane/youtube/10 Second Timer.mp4
+[2025-05-10 00:16:45] [INFO] Copied to selected location: /home/fluktar/Pobrane/youtube/10 Second Timer.mp4
+[2025-05-10 00:16:45] [INFO] Deleted file: /home/fluktar/Pobrane/youtube/10 Second Timer.mp4
+[2025-05-10 00:16:45] [INFO] URL already exists in adres.txt: https://www.youtube.com/watch?v=tCDvOQI3pco
