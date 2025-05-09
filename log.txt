@@ -7,3 +7,19 @@ Usunięto plik: /home/fluktar/Dokumenty/Pobrane/youtube/10 Second Timer.webm
 [2025-05-09 23:00:13] [INFO] Pobrano: /home/fluktar/Dokumenty/Pobrane/youtube/10 Second Timer.mp4
 [2025-05-09 23:00:30] [INFO] Skopiowano do wybranej lokalizacji: /home/fluktar/Dokumenty/Pobrane/youtube/10 Second Timer.mp4
 [2025-05-09 23:00:30] [INFO] Usunięto plik: /home/fluktar/Dokumenty/Pobrane/youtube/10 Second Timer.mp4
+[2025-05-09 23:04:49] [INFO] Dodano nowy adres do adres.txt: https://www.youtube.com/watch?v=tCDvOQI3pco
+[2025-05-09 23:05:01] [INFO] Pobrano: /home/fluktar/Dokumenty/Pobrane/youtube/10 Second Timer.mp4
+[2025-05-09 23:05:05] [INFO] Skopiowano do wybranej lokalizacji: /home/fluktar/Dokumenty/Pobrane/youtube/10 Second Timer.mp4
+[2025-05-09 23:05:05] [INFO] Usunięto plik: /home/fluktar/Dokumenty/Pobrane/youtube/10 Second Timer.mp4
+[2025-05-09 23:05:05] [INFO] Adres już istnieje w adres.txt: https://www.youtube.com/watch?v=tCDvOQI3pco
+[2025-05-09 23:05:08] [INFO] Adres już istnieje w adres.txt: https://www.youtube.com/watch?v=tCDvOQI3pco
+[2025-05-09 23:05:19] [INFO] Pobrano: /home/fluktar/Dokumenty/Pobrane/youtube/10 Second Timer.mp4
+[2025-05-09 23:05:20] [INFO] Skopiowano do wybranej lokalizacji: /home/fluktar/Dokumenty/Pobrane/youtube/10 Second Timer.mp4
+[2025-05-09 23:05:20] [INFO] Usunięto plik: /home/fluktar/Dokumenty/Pobrane/youtube/10 Second Timer.mp4
+[2025-05-09 23:05:20] [INFO] Adres już istnieje w adres.txt: https://www.youtube.com/watch?v=tCDvOQI3pco
+[2025-05-09 23:09:04] [INFO] Adres już istnieje w adres.txt: https://www.youtube.com/watch?v=tCDvOQI3pco
+[2025-05-09 23:09:22] [INFO] Zaktualizowano statystyki: pobrano łącznie 1.34 MB
+[2025-05-09 23:09:22] [INFO] Pobrano: /home/fluktar/Dokumenty/Pobrane/youtube/10 Second Timer.mp4
+[2025-05-09 23:09:26] [INFO] Skopiowano do wybranej lokalizacji: /home/fluktar/Dokumenty/Pobrane/youtube/10 Second Timer.mp4
+[2025-05-09 23:09:26] [INFO] Usunięto plik: /home/fluktar/Dokumenty/Pobrane/youtube/10 Second Timer.mp4
+[2025-05-09 23:09:26] [INFO] Adres już istnieje w adres.txt: https://www.youtube.com/watch?v=tCDvOQI3pco
