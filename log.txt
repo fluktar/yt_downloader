@@ -64,3 +64,24 @@ Usunięto plik: /home/fluktar/Dokumenty/Pobrane/youtube/10 Second Timer.webm
 [2025-05-11 16:59:56] [INFO] Copied to selected location: /home/fluktar/Pobrane/youtube/Parah Dice - Hot (Official Music Video).mp4
 [2025-05-11 16:59:56] [INFO] Deleted file: /home/fluktar/Pobrane/youtube/Parah Dice - Hot (Official Music Video).mp4
 [2025-05-11 16:59:56] [INFO] URL already exists in adres.txt: https://www.youtube.com/watch?v=YMwPgiiubVI
+[2025-05-11 17:04:54] [INFO] Added new URL to adres.txt: https://www.youtube.com/watch?v=oMy6HEI8WgU&list=RDMM&start_radio=1&rv=bAxAxwE0Dgg
+[2025-05-11 17:05:14] [INFO] Downloaded: /home/fluktar/Pobrane/youtube/Bomfunk MC's - Freestyler - 1999⧸2019 - 20 years later (Video comparison).mp4
+[2025-05-11 17:05:22] [INFO] Copied to selected location: /home/fluktar/Pobrane/youtube/Bomfunk MC's - Freestyler - 1999⧸2019 - 20 years later (Video comparison).mp4
+[2025-05-11 17:05:22] [INFO] Deleted file: /home/fluktar/Pobrane/youtube/Bomfunk MC's - Freestyler - 1999⧸2019 - 20 years later (Video comparison).mp4
+[2025-05-11 17:05:22] [INFO] URL already exists in adres.txt: https://www.youtube.com/watch?v=oMy6HEI8WgU&list=RDMM&start_radio=1&rv=bAxAxwE0Dgg
+[2025-05-11 17:06:08] [INFO] Added new URL to adres.txt: https://www.youtube.com/watch?v=Px_KohohYT8&list=RDMM&index=16
+[2025-05-11 17:06:29] [INFO] Downloaded: /home/fluktar/Pobrane/youtube/The Prince Karma  - Later B＊＊ches (Stratus Lyric Video).mp4
+[2025-05-11 17:06:54] [INFO] Copied to selected location: /home/fluktar/Pobrane/youtube/The Prince Karma  - Later B＊＊ches (Stratus Lyric Video).mp4
+[2025-05-11 17:06:54] [INFO] Deleted file: /home/fluktar/Pobrane/youtube/The Prince Karma  - Later B＊＊ches (Stratus Lyric Video).mp4
+[2025-05-11 17:06:54] [INFO] URL already exists in adres.txt: https://www.youtube.com/watch?v=Px_KohohYT8&list=RDMM&index=16
+[2025-05-11 17:07:41] [INFO] Added new URL to adres.txt: https://www.youtube.com/watch?v=cxhab3IMYm0&list=RDMM&index=29
+[2025-05-11 17:07:58] [INFO] Downloaded: /home/fluktar/Pobrane/youtube/Fedde Le Grand - Put Your Hands Up For Detroit (Official Video).mp4
+[2025-05-11 17:08:04] [INFO] Copied to selected location: /home/fluktar/Pobrane/youtube/Fedde Le Grand - Put Your Hands Up For Detroit (Official Video).mp4
+[2025-05-11 17:08:04] [INFO] Deleted file: /home/fluktar/Pobrane/youtube/Fedde Le Grand - Put Your Hands Up For Detroit (Official Video).mp4
+[2025-05-11 17:08:04] [INFO] URL already exists in adres.txt: https://www.youtube.com/watch?v=cxhab3IMYm0&list=RDMM&index=29
+[2025-05-11 17:10:20] [INFO] Added new URL to adres.txt: https://www.youtube.com/watch?v=N3kkNfH4yco
+[2025-05-11 17:10:43] [INFO] Downloaded: None
+[2025-05-11 17:10:49] [INFO] Copied to selected location: None
+[2025-05-11 17:10:56] [INFO] URL already exists in adres.txt: https://www.youtube.com/watch?v=N3kkNfH4yco
+[2025-05-11 17:11:12] [INFO] Downloaded: None
+[2025-05-11 17:11:14] [INFO] Copied to selected location: None
