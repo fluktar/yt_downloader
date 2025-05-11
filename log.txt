@@ -59,3 +59,8 @@ Usunięto plik: /home/fluktar/Dokumenty/Pobrane/youtube/10 Second Timer.webm
 [2025-05-10 00:16:45] [INFO] Copied to selected location: /home/fluktar/Pobrane/youtube/10 Second Timer.mp4
 [2025-05-10 00:16:45] [INFO] Deleted file: /home/fluktar/Pobrane/youtube/10 Second Timer.mp4
 [2025-05-10 00:16:45] [INFO] URL already exists in adres.txt: https://www.youtube.com/watch?v=tCDvOQI3pco
+[2025-05-11 16:59:10] [INFO] Added new URL to adres.txt: https://www.youtube.com/watch?v=YMwPgiiubVI
+[2025-05-11 16:59:41] [INFO] Downloaded: /home/fluktar/Pobrane/youtube/Parah Dice - Hot (Official Music Video).mp4
+[2025-05-11 16:59:56] [INFO] Copied to selected location: /home/fluktar/Pobrane/youtube/Parah Dice - Hot (Official Music Video).mp4
+[2025-05-11 16:59:56] [INFO] Deleted file: /home/fluktar/Pobrane/youtube/Parah Dice - Hot (Official Music Video).mp4
+[2025-05-11 16:59:56] [INFO] URL already exists in adres.txt: https://www.youtube.com/watch?v=YMwPgiiubVI
