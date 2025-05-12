@@ -121,3 +121,45 @@ Usunięto plik: /home/fluktar/Dokumenty/Pobrane/youtube/10 Second Timer.webm
 [2025-05-12 12:10:39] [INFO] Copied to selected location: /home/fluktar/Pobrane/youtube/Brodka   Szysza.mp3
 [2025-05-12 12:10:39] [INFO] Deleted file: /home/fluktar/Pobrane/youtube/Brodka   Szysza.mp3
 [2025-05-12 12:10:39] [INFO] URL already exists in adres.txt: https://www.youtube.com/watch?v=qF9oclp8XZQ&list=PL43556A3A7440D83C
+[2025-05-12 16:48:44] [INFO] DOWNLOAD_PATH is set to: /home/fluktar/Pobrane/youtube
+[2025-05-12 16:48:44] [INFO] DOWNLOAD_PATH exists: /home/fluktar/Pobrane/youtube
+[2025-05-12 16:48:48] [INFO] Added new URL to adres.txt: https://www.youtube.com/watch?v=hTb6ClME6Eg&list=RDGMEMYH9CUrFO7CfLJpaD7UR85wVMhTb6ClME6Eg&start_radio=1
+[2025-05-12 16:50:28] [INFO] Downloaded: /home/fluktar/Pobrane/youtube/Holly Henry - Seven Nation Army (Hot Girl Video).mp4
+[2025-05-12 16:50:36] [INFO] Copied to selected location: /home/fluktar/Pobrane/youtube/Holly Henry - Seven Nation Army (Hot Girl Video).mp4
+[2025-05-12 16:50:36] [INFO] Deleted file: /home/fluktar/Pobrane/youtube/Holly Henry - Seven Nation Army (Hot Girl Video).mp4
+[2025-05-12 16:50:36] [INFO] URL already exists in adres.txt: https://www.youtube.com/watch?v=hTb6ClME6Eg&list=RDGMEMYH9CUrFO7CfLJpaD7UR85wVMhTb6ClME6Eg&start_radio=1
+[2025-05-12 16:50:41] [INFO] Added new URL to adres.txt: https://www.youtube.com/watch?v=Mptdcx36qZU&list=RDGMEMYH9CUrFO7CfLJpaD7UR85wVMhTb6ClME6Eg&index=2
+[2025-05-12 16:51:43] [INFO] Downloaded: /home/fluktar/Pobrane/youtube/Feder - Goodbye feat. Lyse (Official Video).mp4
+[2025-05-12 16:51:49] [INFO] Copied to selected location: /home/fluktar/Pobrane/youtube/Feder - Goodbye feat. Lyse (Official Video).mp4
+[2025-05-12 16:51:49] [INFO] Deleted file: /home/fluktar/Pobrane/youtube/Feder - Goodbye feat. Lyse (Official Video).mp4
+[2025-05-12 16:51:49] [INFO] URL already exists in adres.txt: https://www.youtube.com/watch?v=Mptdcx36qZU&list=RDGMEMYH9CUrFO7CfLJpaD7UR85wVMhTb6ClME6Eg&index=2
+[2025-05-12 16:51:54] [INFO] Added new URL to adres.txt: https://www.youtube.com/watch?v=6b6FBneAENQ&list=RDGMEMYH9CUrFO7CfLJpaD7UR85wVMhTb6ClME6Eg&index=22
+[2025-05-12 16:53:33] [INFO] Downloaded: /home/fluktar/Pobrane/youtube/Drenchill - Freed from Desire ft. Indiiana.mp4
+[2025-05-12 16:53:38] [INFO] Copied to selected location: /home/fluktar/Pobrane/youtube/Drenchill - Freed from Desire ft. Indiiana.mp4
+[2025-05-12 16:53:38] [INFO] Deleted file: /home/fluktar/Pobrane/youtube/Drenchill - Freed from Desire ft. Indiiana.mp4
+[2025-05-12 16:53:38] [INFO] URL already exists in adres.txt: https://www.youtube.com/watch?v=6b6FBneAENQ&list=RDGMEMYH9CUrFO7CfLJpaD7UR85wVMhTb6ClME6Eg&index=22
+[2025-05-12 16:53:41] [INFO] Added new URL to adres.txt: https://www.youtube.com/watch?v=y6iMvNkAQt4&list=RDGMEMYH9CUrFO7CfLJpaD7UR85wVMhTb6ClME6Eg&index=20
+[2025-05-12 16:55:45] [INFO] Downloaded: /home/fluktar/Pobrane/youtube/Zerb - Mwaki (Feat. @Sofiya Nzau) [Official Music Video].mp4
+[2025-05-12 16:55:53] [INFO] Copied to selected location: /home/fluktar/Pobrane/youtube/Zerb - Mwaki (Feat. @Sofiya Nzau) [Official Music Video].mp4
+[2025-05-12 16:55:53] [INFO] Deleted file: /home/fluktar/Pobrane/youtube/Zerb - Mwaki (Feat. @Sofiya Nzau) [Official Music Video].mp4
+[2025-05-12 16:55:53] [INFO] URL already exists in adres.txt: https://www.youtube.com/watch?v=y6iMvNkAQt4&list=RDGMEMYH9CUrFO7CfLJpaD7UR85wVMhTb6ClME6Eg&index=20
+[2025-05-12 16:55:57] [INFO] Added new URL to adres.txt: https://www.youtube.com/watch?v=rQ7tMWOCQlM&list=RDGMEMYH9CUrFO7CfLJpaD7UR85wVMhTb6ClME6Eg&index=14
+[2025-05-12 16:57:11] [INFO] Downloaded: /home/fluktar/Pobrane/youtube/Mahmut Orhan - Feel feat. Sena Sener (Official Video) [Ultra Records].mp4
+[2025-05-12 16:57:17] [INFO] Copied to selected location: /home/fluktar/Pobrane/youtube/Mahmut Orhan - Feel feat. Sena Sener (Official Video) [Ultra Records].mp4
+[2025-05-12 16:57:17] [INFO] Deleted file: /home/fluktar/Pobrane/youtube/Mahmut Orhan - Feel feat. Sena Sener (Official Video) [Ultra Records].mp4
+[2025-05-12 16:57:17] [INFO] URL already exists in adres.txt: https://www.youtube.com/watch?v=rQ7tMWOCQlM&list=RDGMEMYH9CUrFO7CfLJpaD7UR85wVMhTb6ClME6Eg&index=14
+[2025-05-12 16:57:20] [INFO] Added new URL to adres.txt: https://www.youtube.com/watch?v=Kq4OtRsdXls&list=RDGMEMYH9CUrFO7CfLJpaD7UR85wVMhTb6ClME6Eg&index=36
+[2025-05-12 16:58:47] [INFO] Downloaded: /home/fluktar/Pobrane/youtube/Alex Gaudino feat. Crystal Waters - Destination Calabria [Explicit Version] [Official Video].mp4
+[2025-05-12 16:58:51] [INFO] Copied to selected location: /home/fluktar/Pobrane/youtube/Alex Gaudino feat. Crystal Waters - Destination Calabria [Explicit Version] [Official Video].mp4
+[2025-05-12 16:58:51] [INFO] Deleted file: /home/fluktar/Pobrane/youtube/Alex Gaudino feat. Crystal Waters - Destination Calabria [Explicit Version] [Official Video].mp4
+[2025-05-12 16:58:51] [INFO] URL already exists in adres.txt: https://www.youtube.com/watch?v=Kq4OtRsdXls&list=RDGMEMYH9CUrFO7CfLJpaD7UR85wVMhTb6ClME6Eg&index=36
+[2025-05-12 16:58:57] [INFO] Added new URL to adres.txt: https://www.youtube.com/watch?v=A1NmCvuxQ3o&list=RDGMEMYH9CUrFO7CfLJpaD7UR85wVMhTb6ClME6Eg&index=27
+[2025-05-12 16:59:41] [INFO] Downloaded: /home/fluktar/Pobrane/youtube/Mahmut Orhan & Colonel Bagshot - 6 Days (Official Music Video HD).mp4
+[2025-05-12 16:59:44] [INFO] Copied to selected location: /home/fluktar/Pobrane/youtube/Mahmut Orhan & Colonel Bagshot - 6 Days (Official Music Video HD).mp4
+[2025-05-12 16:59:44] [INFO] Deleted file: /home/fluktar/Pobrane/youtube/Mahmut Orhan & Colonel Bagshot - 6 Days (Official Music Video HD).mp4
+[2025-05-12 16:59:44] [INFO] URL already exists in adres.txt: https://www.youtube.com/watch?v=A1NmCvuxQ3o&list=RDGMEMYH9CUrFO7CfLJpaD7UR85wVMhTb6ClME6Eg&index=27
+[2025-05-12 16:59:49] [INFO] Added new URL to adres.txt: https://www.youtube.com/watch?v=NU6qkVYxxVY&list=RDGMEMYH9CUrFO7CfLJpaD7UR85wVMhTb6ClME6Eg&index=29
+[2025-05-12 17:01:13] [INFO] Downloaded: /home/fluktar/Pobrane/youtube/Bodybangers - Sunglasses at Night (Video Edit).mp4
+[2025-05-12 17:01:18] [INFO] Copied to selected location: /home/fluktar/Pobrane/youtube/Bodybangers - Sunglasses at Night (Video Edit).mp4
+[2025-05-12 17:01:18] [INFO] Deleted file: /home/fluktar/Pobrane/youtube/Bodybangers - Sunglasses at Night (Video Edit).mp4
+[2025-05-12 17:01:18] [INFO] URL already exists in adres.txt: https://www.youtube.com/watch?v=NU6qkVYxxVY&list=RDGMEMYH9CUrFO7CfLJpaD7UR85wVMhTb6ClME6Eg&index=29
