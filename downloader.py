@@ -25,15 +25,18 @@ def download_video(url, download_path, only_audio=False):
                 ],
                 "noplaylist": True,
                 "quiet": True,
+                "ratelimit": 1_000_000,
+                "ffmpeg_location": "/usr/bin",
             }
             with youtube_dl.YoutubeDL(ydl_opts) as ydl:
                 info_dict = ydl.extract_info(url, download=True)
                 file_path = ydl.prepare_filename(info_dict)
+                file_path = path.splitext(file_path)[0] + ".mp3"
                 print(f"Downloaded: {info_dict.get('title', 'Unknown title')}")
                 print(f"Saved to: {file_path}")
                 return file_path
+
         else:
-            # Download all available formats and let user choose
             with youtube_dl.YoutubeDL({"quiet": True, "noplaylist": True}) as ydl:
                 info_dict = ydl.extract_info(url, download=False)
                 formats = info_dict.get("formats", [])
@@ -42,7 +45,6 @@ def download_video(url, download_path, only_audio=False):
                     print("No video formats available.")
                     return None
 
-                # Display available formats
                 for i, fmt in enumerate(video_formats):
                     resolution = fmt.get("height", "unknown")
                     filesize = fmt.get("filesize", "unknown")
@@ -56,7 +58,6 @@ def download_video(url, download_path, only_audio=False):
                         f"{i + 1}. {fmt['format_id']} - Resolution: {resolution}p, Size: {filesize}, Type: {audio_info}"
                     )
 
-                # User selects format
                 try:
                     choice = int(input("Select format number to download: ")) - 1
                     if choice < 0 or choice >= len(video_formats):
@@ -70,12 +71,10 @@ def download_video(url, download_path, only_audio=False):
                 selected_format_id = selected_format["format_id"]
                 print(f"Selected format: {selected_format_id}")
 
-                # If selected format has no audio, add bestaudio
                 if selected_format.get("acodec") == "none":
                     selected_format_id += "+bestaudio"
                     print("Best available audio will be added to the format.")
 
-            # Download with merging video and audio if needed
             ydl_opts = {
                 "outtmpl": path.join(download_path, "%(title)s.%(ext)s"),
                 "format": selected_format_id,
@@ -86,8 +85,9 @@ def download_video(url, download_path, only_audio=False):
                         "preferedformat": "mp4",
                     }
                 ],
-                "ffmpeg_location": "/usr/bin/ffmpeg",
+                "ffmpeg_location": "/usr/bin",
                 "noplaylist": True,
+                "ratelimit": 1_000_000,
             }
             with youtube_dl.YoutubeDL(ydl_opts) as ydl:
                 info_dict = ydl.extract_info(url, download=True)

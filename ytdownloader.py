@@ -16,9 +16,7 @@ USER_PATHS_FILE = os.getenv(
 
 DOWNLOAD_PATH = os.getenv(
     "DOWNLOAD_PATH",
-    os.path.abspath(
-        os.path.join(__file__, "..", "..", "..", "..", "..", "Pobrane", "youtube")
-    ),
+    os.path.expanduser("~/Pobrane/youtube"),
 )
 
 LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO")
@@ -43,8 +41,6 @@ def log_event(message, level="INFO"):
     entry = f"[{timestamp}] [{level}] {message}\n"
     with open(log_file, "a") as f:
         f.write(entry)
-    # You can also print the log entry to the console:
-    # print(entry, end="")
 
 
 def check_free_space(directory, min_bytes=500 * 1024 * 1024):
@@ -56,13 +52,11 @@ def check_free_space(directory, min_bytes=500 * 1024 * 1024):
 
 def save_url_if_new(url):
     adres_file = get_file_path("adres.txt")
-    # Load existing URLs (one per line)
     if os.path.exists(adres_file):
         with open(adres_file, "r") as f:
             urls = set(line.strip() for line in f if line.strip())
     else:
         urls = set()
-    # Add only if not already present
     if url not in urls:
         with open(adres_file, "a") as f:
             f.write(url + "\n")
@@ -72,6 +66,17 @@ def save_url_if_new(url):
 
 
 def main():
+    print(f"DOWNLOAD_PATH is set to: {DOWNLOAD_PATH}")
+    log_event(f"DOWNLOAD_PATH is set to: {DOWNLOAD_PATH}", level="INFO")
+
+    if not os.path.exists(DOWNLOAD_PATH):
+        print(f"DOWNLOAD_PATH does not exist. Creating: {DOWNLOAD_PATH}")
+        os.makedirs(DOWNLOAD_PATH)
+        log_event(f"Created missing download directory: {DOWNLOAD_PATH}", level="INFO")
+    else:
+        print(f"DOWNLOAD_PATH exists: {DOWNLOAD_PATH}")
+        log_event(f"DOWNLOAD_PATH exists: {DOWNLOAD_PATH}", level="INFO")
+
     total_mb = load_stats()
     print(f"Total downloaded so far: {total_mb:.2f} MB")
 
@@ -101,20 +106,28 @@ def main():
 
         try:
             file_path = download_video(url, DOWNLOAD_PATH, only_audio=only_audio)
+            if file_path is None:
+                print("Download failed. Skipping.")
+                log_event(
+                    "Download returned None. Skipping post-download steps.",
+                    level="WARNING",
+                )
+                continue
         except Exception as e:
             log_event(f"Failed to download: {e}", level="WARNING")
             continue
 
         log_event(f"Downloaded: {file_path}")
-        user_paths = load_user_paths(USER_PATHS_FILE)
-        if DOWNLOAD_PATH and DOWNLOAD_PATH not in user_paths:
-            user_paths.insert(0, DOWNLOAD_PATH)
-            save_user_paths(user_paths, USER_PATHS_FILE)
+
         copy_to(file_path, USER_PATHS_FILE)
         log_event(f"Copied to selected location: {file_path}")
+
         if os.path.exists(file_path):
-            delete_file(file_path)
-            log_event(f"Deleted file: {file_path}")
+            try:
+                delete_file(file_path)
+                log_event(f"Deleted file: {file_path}")
+            except Exception as e:
+                log_event(f"Failed to delete {file_path}: {e}", level="ERROR")
         else:
             log_event(f"File not found for deletion: {file_path}", level="WARNING")
 

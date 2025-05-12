@@ -85,3 +85,39 @@ Usunięto plik: /home/fluktar/Dokumenty/Pobrane/youtube/10 Second Timer.webm
 [2025-05-11 17:10:56] [INFO] URL already exists in adres.txt: https://www.youtube.com/watch?v=N3kkNfH4yco
 [2025-05-11 17:11:12] [INFO] Downloaded: None
 [2025-05-11 17:11:14] [INFO] Copied to selected location: None
+[2025-05-12 11:43:53] [INFO] DOWNLOAD_PATH is set to: /home/fluktar/Pobrane/youtube
+[2025-05-12 11:43:53] [INFO] DOWNLOAD_PATH exists: /home/fluktar/Pobrane/youtube
+[2025-05-12 11:44:07] [INFO] Added new URL to adres.txt: https://www.youtube.com/watch?v=D1CjdBPmIzg
+[2025-05-12 11:44:13] [INFO] Downloaded: None
+[2025-05-12 11:44:13] [INFO] Destination path is set to: /home/fluktar/Music Video Collection/
+[2025-05-12 11:55:35] [INFO] DOWNLOAD_PATH is set to: /home/fluktar/Pobrane/youtube
+[2025-05-12 11:55:35] [INFO] DOWNLOAD_PATH exists: /home/fluktar/Pobrane/youtube
+[2025-05-12 11:55:53] [INFO] URL already exists in adres.txt: https://www.youtube.com/watch?v=D1CjdBPmIzg
+[2025-05-12 11:55:59] [INFO] Downloaded: None
+[2025-05-12 11:57:37] [INFO] DOWNLOAD_PATH is set to: /home/fluktar/Pobrane/youtube
+[2025-05-12 11:57:37] [INFO] DOWNLOAD_PATH exists: /home/fluktar/Pobrane/youtube
+[2025-05-12 11:57:45] [INFO] URL already exists in adres.txt: https://www.youtube.com/watch?v=D1CjdBPmIzg
+[2025-05-12 11:57:51] [INFO] Downloaded: None
+[2025-05-12 11:58:00] [INFO] Copied to selected location: None
+[2025-05-12 11:58:03] [INFO] DOWNLOAD_PATH is set to: /home/fluktar/Pobrane/youtube
+[2025-05-12 11:58:03] [INFO] DOWNLOAD_PATH exists: /home/fluktar/Pobrane/youtube
+[2025-05-12 11:58:04] [INFO] URL already exists in adres.txt: https://www.youtube.com/watch?v=D1CjdBPmIzg
+[2025-05-12 11:58:18] [INFO] Downloaded: /home/fluktar/Pobrane/youtube/Brodka - Granda.mp4
+[2025-05-12 11:58:24] [INFO] Copied to selected location: /home/fluktar/Pobrane/youtube/Brodka - Granda.mp4
+[2025-05-12 11:58:24] [INFO] Deleted file: /home/fluktar/Pobrane/youtube/Brodka - Granda.mp4
+[2025-05-12 11:58:24] [INFO] URL already exists in adres.txt: https://www.youtube.com/watch?v=D1CjdBPmIzg
+[2025-05-12 12:01:32] [INFO] DOWNLOAD_PATH is set to: /home/fluktar/Pobrane/youtube
+[2025-05-12 12:01:32] [INFO] DOWNLOAD_PATH exists: /home/fluktar/Pobrane/youtube
+[2025-05-12 12:01:42] [INFO] URL already exists in adres.txt: https://www.youtube.com/watch?v=D1CjdBPmIzg
+[2025-05-12 12:01:48] [WARNING] Download returned None. Skipping post-download steps.
+[2025-05-12 12:09:27] [INFO] DOWNLOAD_PATH is set to: /home/fluktar/Pobrane/youtube
+[2025-05-12 12:09:27] [INFO] DOWNLOAD_PATH exists: /home/fluktar/Pobrane/youtube
+[2025-05-12 12:09:37] [INFO] URL already exists in adres.txt: https://www.youtube.com/watch?v=D1CjdBPmIzg
+[2025-05-12 12:09:42] [WARNING] Download returned None. Skipping post-download steps.
+[2025-05-12 12:09:52] [INFO] DOWNLOAD_PATH is set to: /home/fluktar/Pobrane/youtube
+[2025-05-12 12:09:52] [INFO] DOWNLOAD_PATH exists: /home/fluktar/Pobrane/youtube
+[2025-05-12 12:10:05] [INFO] Added new URL to adres.txt: https://www.youtube.com/watch?v=qF9oclp8XZQ&list=PL43556A3A7440D83C
+[2025-05-12 12:10:18] [INFO] Downloaded: /home/fluktar/Pobrane/youtube/Brodka   Szysza.mp3
+[2025-05-12 12:10:39] [INFO] Copied to selected location: /home/fluktar/Pobrane/youtube/Brodka   Szysza.mp3
+[2025-05-12 12:10:39] [INFO] Deleted file: /home/fluktar/Pobrane/youtube/Brodka   Szysza.mp3
+[2025-05-12 12:10:39] [INFO] URL already exists in adres.txt: https://www.youtube.com/watch?v=qF9oclp8XZQ&list=PL43556A3A7440D83C
